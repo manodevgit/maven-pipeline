@@ -17,7 +17,7 @@ checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], user
         }
     }
     
-     stage('Compile') {
+     stage('compile_code') {
             steps {
                 sh 'mvn compile'
         }
