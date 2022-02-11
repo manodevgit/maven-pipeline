@@ -11,18 +11,18 @@ pipeline {
 checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'devopsdeepdive', url: 'https://github.com/devopsdeepdive/maven-pipeline.git']]])            }
         }
     
-     stage('validate') {
+     stage('Validate') {
             steps {
                 sh 'mvn validate'
         }
     }
     
-     stage('compile') {
+     stage('Compile') {
             steps {
                 sh 'mvn compile'
         }
     }
-      stage('test') {
+      stage('Test') {
             steps {
                 sh 'mvn test'
         }
