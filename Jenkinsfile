@@ -35,7 +35,7 @@ checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], user
 	     stage('deploy') {
             steps {
              sshagent(['tomcat-deploy']) {
-   sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/maven-pipeline/target/maven-web-application.war ubuntu@ec2-35-154-207-37.ap-south-1.compute.amazonaws.com:/opt/apache-tomcat-9.0.62/webapps"
+   sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/maven-pipeline/target/maven-web-application.war ubuntu@172.31.43.182:/opt/apache-tomcat-9.0.62/webapps"
 }
         }
     }
