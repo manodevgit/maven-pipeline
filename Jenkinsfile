@@ -27,7 +27,7 @@ checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], user
                 sh 'mvn test'
         }
     }
-     stage('Package') {
+     stage('Package_new') {
             steps {
                 sh 'mvn package'
         }
